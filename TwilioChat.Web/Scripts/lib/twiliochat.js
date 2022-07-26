@@ -239,7 +239,7 @@ var twiliochat = (function () {
 
     tc.initAllMessage = function (messages) {
         tc.currentMessages = messages.items
-
+        tc.$messageList.empty();
         messages?.items.forEach((message, index) => {
             createChatBubble(messages.items, message, index);
         });
